@@ -5,15 +5,14 @@ using UnityEngine;
 public class FireBall : MonoBehaviour
 {
     [SerializeField] FirebollData fireballData;
+    [SerializeField] Rigidbody2D rb;
+
     string toDamage;
     int damage;
     float speed;
     float lifeTime;
 
-    Rigidbody2D rb;
     IEnumerator timeCount;
-
-
 
     private void Start()
     {
@@ -22,7 +21,6 @@ public class FireBall : MonoBehaviour
         speed = fireballData.speed;
         lifeTime = fireballData.lifeTime;
 
-        rb = GetComponent<Rigidbody2D>();
         timeCount = TimeCount();
         StartCoroutine(timeCount);
 
@@ -50,7 +48,6 @@ public class FireBall : MonoBehaviour
         }
         
         Destroy(gameObject);
-        //StopCoroutine(timeCount);
     }
 
     IEnumerator TimeCount()

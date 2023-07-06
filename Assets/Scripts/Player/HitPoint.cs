@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class HitPoint : MonoBehaviour
 {
-    
+    [SerializeField] PlayerManager playerManager;
+
     int damageWeak;
 
     private void Start()
-    {
-        PlayerManager playerManager = transform.parent.GetComponent<PlayerManager>();
-        
+    {   
         damageWeak = playerManager.GetDamagePowerWeak();
     }
 

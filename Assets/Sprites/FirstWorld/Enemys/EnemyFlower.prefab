@@ -159,9 +159,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 34d27bc28af79304bbfaac4f91f8ceb1, type: 2}
   behavior: 0
+  rb: {fileID: 0}
   item: {fileID: 0}
   pointRaycastEmit: {fileID: 7136128879353275907}
-  moveSpeed: 0
+  pointSpawnItem: {fileID: 0}
 --- !u!114 &7136128879655376450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,4 +175,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f18bca04a73c99240bbcbd2b13ea01e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  enemy: {fileID: 7136128879655376461}

@@ -26,10 +26,10 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] Transform hitRight;
     [SerializeField] GameObject fireball;
     [SerializeField] Transform pointCompanion;
-
-    Rigidbody2D rb;
-    SpriteRenderer rend;
-    CapsuleCollider2D capsule;
+    [SerializeField] Rigidbody2D rb;
+    [SerializeField] SpriteRenderer rend;
+    [SerializeField] CapsuleCollider2D capsule;
+    
     Spine.AnimationState spineAnimationState;
 
     
@@ -45,23 +45,14 @@ public class PlayerManager : MonoBehaviour
 
     bool isAlive;
     bool isGround;
-    public int direction = 1;
+    int direction = 1;
     Vector2 capsuleColliderSize;
     Vector2 damageVector = new Vector2(5000, 100);
 
-    [SerializeField] Animation anim;
-
     public Transform GetPointCompanion() { return pointCompanion; }
 
-
-
-
-    void Start()
+    private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        rend = GetComponent<SpriteRenderer>();
-        capsule = GetComponent<CapsuleCollider2D>();
-
         spineAnimationState = skeletonAnimation.AnimationState;
 
         hitPoint.SetActive(false);
@@ -70,9 +61,8 @@ public class PlayerManager : MonoBehaviour
         isAlive = true;
 
     }
-
-    
-    void FixedUpdate()
+   
+    private void FixedUpdate()
     {
         if (isAlive)
         {
@@ -89,23 +79,19 @@ public class PlayerManager : MonoBehaviour
             Dash();
             ToHit();
             ToFire();
-
         }
-
         
     }
 
     public void SetAnimation(AnimationPlayer anim, bool loop = false)
     {
         spineAnimationState.SetAnimation(0, anim.ToString(), loop);
-
     }
 
     public int GetDamagePowerWeak()
     {
         return damagePowerHit;
     }
-
 
     void Move()
     {
@@ -136,7 +122,7 @@ public class PlayerManager : MonoBehaviour
         else SetAnimation(AnimationPlayer.idle, true);
     }
 
-    void Jump()
+    private void Jump()
     {
         if (jump)
         {
@@ -167,7 +153,7 @@ public class PlayerManager : MonoBehaviour
         else SetAnimation(AnimationPlayer.run);
     }
 
-    Transform RayCast()
+    private Transform RayCast()
     {
         RaycastHit2D[] hits;
         Debug.DrawRay(hitRight.transform.position, transform.right * dashObstacleSize, Color.red);
@@ -182,7 +168,7 @@ public class PlayerManager : MonoBehaviour
         return transform;
     }
 
-    void Dash()
+    private void Dash()
     {
         if (dash && GameManager.haveCompanion)
         {
@@ -250,15 +236,11 @@ public class PlayerManager : MonoBehaviour
                     climbUp = ClimbUp(collision.gameObject.transform);
                     StartCoroutine(climbUp);
                 }
-
-
             }
         }
-
     }
 
-
-    void ToHit()
+    private void ToHit()
     {
         if (hit)
         {
@@ -271,7 +253,7 @@ public class PlayerManager : MonoBehaviour
         
     }
 
-    void ToFire()
+    private void ToFire()
     {
         if (fire && GameManager.haveCompanion)
         {

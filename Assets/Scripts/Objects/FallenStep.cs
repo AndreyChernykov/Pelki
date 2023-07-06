@@ -7,7 +7,6 @@ public class FallenStep : MonoBehaviour
     [SerializeField] float timeDelayFallen = 1;
     [SerializeField] float timeDelayRecovery = 3;
 
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Player")

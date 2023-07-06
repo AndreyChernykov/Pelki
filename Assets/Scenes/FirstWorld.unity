@@ -9103,7 +9103,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -27, y: 1}
+  m_AnchoredPosition: {x: -146, y: 0}
   m_SizeDelta: {x: 1280, y: 720}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &522772459
@@ -16738,6 +16738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbdcb6059b499bf49bb3c9cc545d6710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerManager: {fileID: 1156747184}
 --- !u!1 &1033547107
 GameObject:
   m_ObjectHideFlags: 0
@@ -18143,7 +18144,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156747178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28, y: 0, z: 0}
+  m_LocalPosition: {x: -147, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18167,6 +18168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0813a51f06b04245b6077c658c41278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerManager: {fileID: 1156747184}
 --- !u!114 &1156747184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18190,8 +18192,9 @@ MonoBehaviour:
   fireball: {fileID: 7554280549597486913, guid: e3667460f51d01444b0855e00514c69b,
     type: 3}
   pointCompanion: {fileID: 174865337}
-  direction: 1
-  anim: {fileID: 0}
+  rb: {fileID: 1156747179}
+  rend: {fileID: 1156747181}
+  capsule: {fileID: 1156747185}
 --- !u!70 &1156747185
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -18220,6 +18223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77f0379604ad9c844af7cc83e46af99a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerManager: {fileID: 1156747184}
   joystick: {fileID: 2117796353}
   buttonAbilities:
   - {fileID: 81880654}
@@ -18556,6 +18560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  boxCollider: {fileID: 1171118262}
 --- !u!1001 &1180704220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36648,7 +36653,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2124921600}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -263.04803, y: -6.6897163, z: -9.633479}
+  m_LocalPosition: {x: -382.04803, y: -7.6897163, z: -9.633479}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -36892,7 +36897,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2137978613}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23, y: -3.3, z: 0}
+  m_LocalPosition: {x: -23, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -36942,9 +36947,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 9463d5260e44b3444a5fcdae7f6d614d, type: 2}
   behavior: 0
+  rb: {fileID: 2137978617}
   item: {fileID: 563932566716633333, guid: ee41eee35a1ab7649aae0f199975a5b7, type: 3}
   pointRaycastEmit: {fileID: 392694086}
-  pointSpawnItem: {fileID: 0}
+  pointSpawnItem: {fileID: 115356181}
 --- !u!50 &2137978617
 Rigidbody2D:
   serializedVersion: 4

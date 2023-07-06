@@ -12,7 +12,6 @@ public class PuzzleRotate : MonoBehaviour
 
         if (Mathf.Round(transform.eulerAngles.z) == 0)
         {
-            //Debug.Log(name + " true!!! " + transform.eulerAngles.z);
             solution = true;
         }
         else

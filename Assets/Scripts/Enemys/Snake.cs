@@ -4,20 +4,17 @@ using UnityEngine;
 
 public class Snake : MonoBehaviour
 {
+    [SerializeField] Enemy enemy;
     [SerializeField] GameObject fireball;
     [SerializeField] float shotFrequency;
     [SerializeField] Transform shootPoint;
 
-    Enemy enemy;
     IEnumerator fire;
 
     void Start()
     {
-        enemy = GetComponent<Enemy>();
-
         fire = Fire();
         StartCoroutine(fire);
-
     }
 
     IEnumerator Fire()

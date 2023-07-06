@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Flower : MonoBehaviour
 {
-    Enemy enemy;
-    public int damage;
+    [SerializeField]Enemy enemy;
+
+    int damage;
 
     void Start()
     {
-        enemy = GetComponent<Enemy>();
         damage = enemy.damage;
     }
 

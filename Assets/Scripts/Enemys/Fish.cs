@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Fish : MonoBehaviour
 {
-    Enemy enemy;
+    [SerializeField] Enemy enemy;
+
     int damage;
 
-    void Start()
+    private void Start()
     {
-        enemy = GetComponent<Enemy>();
         damage = enemy.damage;
     }
 

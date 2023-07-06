@@ -7,7 +7,7 @@ public class CloudsSystem : MonoBehaviour
     [SerializeField] List<GameObject> clouds = new List<GameObject>();
     [SerializeField] float timeDelay;
 
-    void Start()
+    private void Start()
     {
         StartCoroutine(Disappearance());
     }

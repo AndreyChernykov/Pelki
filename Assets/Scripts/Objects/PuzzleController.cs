@@ -81,7 +81,7 @@ public class PuzzleController : MonoBehaviour
         StopCoroutine(cameraBehavior);
     }
 
-    void CheckSolution()
+    private void CheckSolution()
     {
         int countSolution = 0;
 
@@ -106,7 +106,7 @@ public class PuzzleController : MonoBehaviour
         }
     }
 
-    void SetReward(bool b, GameObject[] objects)
+    private void SetReward(bool b, GameObject[] objects)
     {
         if(objects != null)
         {

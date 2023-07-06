@@ -8,12 +8,12 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] EnemyData enemyData;
     [SerializeField] Behavior behavior;
+    [SerializeField] Rigidbody2D rb;
     [SerializeField] GameObject item;
     [SerializeField] Transform pointRaycastEmit;
     [SerializeField] Transform pointSpawnItem;
     
     GameObject itemObject;
-    Rigidbody2D rb;
 
     float detectionDistance;
     int health;
@@ -40,14 +40,11 @@ public class Enemy : MonoBehaviour
         damage = enemyData.damage;
         moveDirection = -1;
 
-        rb = GetComponent<Rigidbody2D>();
-
         isAttack = false;
     }
 
     private void Start()
     {
-
 
         if (item != null)
         {
@@ -62,9 +59,7 @@ public class Enemy : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
-        Raycast();
-
-        
+        Raycast();       
     }
 
 
@@ -87,7 +82,7 @@ public class Enemy : MonoBehaviour
     private void Raycast()
     {
         RaycastHit2D[] hits;
-        Debug.DrawRay(pointRaycastEmit.position, -transform.right * detectionDistance, Color.red);
+        //Debug.DrawRay(pointRaycastEmit.position, -transform.right * detectionDistance, Color.red);
 
         hits = Physics2D.RaycastAll(pointRaycastEmit.position, -transform.right, detectionDistance);
 
@@ -145,7 +140,7 @@ public class Enemy : MonoBehaviour
         if (itemObject != null)
         {
             GameObject itemObj = Instantiate(itemObject, pointSpawnItem.position, Quaternion.identity);
-            itemObj.transform.position = transform.position;
+            itemObj.transform.position = pointSpawnItem.transform.position;
             itemObj.SetActive(true);
         }
         gameObject.SetActive(false);

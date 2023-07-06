@@ -6,17 +6,9 @@ using UnityEngine.UI;
 //управление игрой для телефона
 public class PlayerMobileController : MonoBehaviour
 {
+    [SerializeField] PlayerManager playerManager;
     [SerializeField] DynamicJoystick joystick;
     [SerializeField] List<Button> buttonAbilities = new List<Button>();
-
-    PlayerManager playerManager;
-    
-
-    private void Awake()
-    {
-        
-        playerManager = GetComponent<PlayerManager>();
-    }
 
     private void FixedUpdate()
     {

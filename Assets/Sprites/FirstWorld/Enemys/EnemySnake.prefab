@@ -104,9 +104,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: ef46cfe1019306b48ab6d30e7a7e1228, type: 2}
   behavior: 1
+  rb: {fileID: 7947997924889194967}
   item: {fileID: 2076985619365870150, guid: e0b519c4366c3b4499a5aec1b596daf2, type: 3}
   pointRaycastEmit: {fileID: 2506971221373927225}
-  moveSpeed: 0
+  pointSpawnItem: {fileID: 0}
 --- !u!114 &4152283964374791105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3adb883f04068f94da705516798683a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 4152283964374791106}
   fireball: {fileID: 7554280549597486913, guid: 65ee537a3ae87d04ab0cbdf02e86df6e,
     type: 3}
   shotFrequency: 2

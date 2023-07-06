@@ -134,9 +134,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 939db8787cb583d488d196cf43c53fb1, type: 2}
   behavior: 1
+  rb: {fileID: 8758287856885093863}
   item: {fileID: 0}
   pointRaycastEmit: {fileID: 8758287856859051219}
-  moveSpeed: 0
+  pointSpawnItem: {fileID: 0}
 --- !u!114 &8758287856885093860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35ffce5dcdcf39e4f90569628fd26640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 8758287856885093857}
 --- !u!58 &8758287856885093862
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Items : MonoBehaviour
 {
     [SerializeField] ItemData itemData;
+
     ItemType type;
     int score;
 
@@ -29,12 +30,8 @@ public class Items : MonoBehaviour
                     GameManager.health += score;
                     break;
             }
-            Debug.Log(type + " = " + score);
-            Destroy(gameObject);
-            
-
-
-            
+            //Debug.Log(type + " = " + score);
+            Destroy(gameObject);           
         }
     }
 }

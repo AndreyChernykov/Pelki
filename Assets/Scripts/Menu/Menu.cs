@@ -23,7 +23,7 @@ public class Menu : MonoBehaviour
 
     [SerializeField] Button ruLocalizationButton;
 
-    private void Update()
+    private void FixedUpdate()
     {
         WheelRotateTick();
     }
@@ -50,7 +50,7 @@ public class Menu : MonoBehaviour
         LocalizationManager.Language = enLanguageKey;
     }
 
-    void WheelRotateTick()
+    private void WheelRotateTick()
     {
         foreach (GameObject wheel in listWheelDecor)
         {
