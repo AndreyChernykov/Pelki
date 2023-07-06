@@ -297,10 +297,10 @@ MonoBehaviour:
   cameraOrthoSize: 6
   speedRotate: 2
   puzzleElements:
-  - {fileID: 5432368944894629548}
-  - {fileID: 5432368945569521775}
-  - {fileID: 5432368946431473492}
-  - {fileID: 5432368945712372990}
+  - {fileID: 5432368944894629544}
+  - {fileID: 5432368945569521771}
+  - {fileID: 5432368946431473488}
+  - {fileID: 5432368945712372986}
   activateObjects:
   - {fileID: 6318912758817416678}
   - {fileID: 6318912757585639201}

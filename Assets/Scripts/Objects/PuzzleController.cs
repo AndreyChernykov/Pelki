@@ -9,7 +9,7 @@ public class PuzzleController : MonoBehaviour
     [SerializeField] CinemachineVirtualCamera virtualCamera;
     [SerializeField] float cameraOrthoSize;
     [SerializeField] float speedRotate;
-    [SerializeField] GameObject[] puzzleElements;
+    [SerializeField] List<PuzzleRotate> puzzleElements;
     [SerializeField] GameObject[] activateObjects;
     [SerializeField] GameObject[] deactivateObjects;
 
@@ -25,8 +25,7 @@ public class PuzzleController : MonoBehaviour
 
         foreach (var puzzleElement in puzzleElements)
         {
-            PuzzleRotate puzzleRotate = puzzleElement.GetComponent<PuzzleRotate>();
-            puzzleRotate.speedRotate = speedRotate;
+            puzzleElement.speedRotate = speedRotate;
             puzzleElement.transform.Rotate(0, 0, Random.Range(0, 360));
         }
     }
@@ -87,8 +86,7 @@ public class PuzzleController : MonoBehaviour
 
         foreach(var puzzleElement in puzzleElements)
         {
-            PuzzleRotate puzzleRotate = puzzleElement.GetComponent<PuzzleRotate>();
-            if (puzzleRotate.solution == false)
+            if (puzzleElement.solution == false)
             {
                 countSolution = 0;
                 break;
@@ -97,7 +95,7 @@ public class PuzzleController : MonoBehaviour
             countSolution++;
         }
 
-        if(countSolution >= puzzleElements.Length)
+        if(countSolution >= puzzleElements.Count)
         {
             SetReward(false, deactivateObjects);
             SetReward(true, activateObjects);
