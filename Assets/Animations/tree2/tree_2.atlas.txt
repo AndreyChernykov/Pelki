@@ -1,0 +1,5 @@
+tree_2.png
+size:790,790
+filter:Linear,Linear
+tree trunk_2
+bounds:1,1,219,788

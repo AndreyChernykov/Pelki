@@ -26,7 +26,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] Transform hitRight;
     [SerializeField] GameObject fireball;
     [SerializeField] Transform pointCompanion;
-    [SerializeField] Rigidbody2D rb;
+    [SerializeField] Rigidbody2D rigidBody;
     [SerializeField] SpriteRenderer rend;
     [SerializeField] CapsuleCollider2D capsule;
     
@@ -111,8 +111,8 @@ public class PlayerManager : MonoBehaviour
         else transform.eulerAngles = new Vector2(0, 180);
         movement = new Vector2(move, 0) * moveSpeed;
         movement = Vector2.ClampMagnitude(movement, moveSpeed);
-        movement.y = rb.velocity.y;
-        rb.velocity = movement;
+        movement.y = rigidBody.velocity.y;
+        rigidBody.velocity = movement;
 
     }
 
@@ -128,7 +128,7 @@ public class PlayerManager : MonoBehaviour
         {
             if (isGround) 
             {
-                rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                rigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 StartCoroutine(JumpAnim());
             } 
 
@@ -149,7 +149,7 @@ public class PlayerManager : MonoBehaviour
     {
         SetAnimation(AnimationPlayer.jump_up_to_down);
         yield return new WaitForSeconds(0.7f);
-        if(rb.velocity.x == 0)SetAnimation(AnimationPlayer.idle);
+        if(rigidBody.velocity.x == 0)SetAnimation(AnimationPlayer.idle);
         else SetAnimation(AnimationPlayer.run);
     }
 
@@ -190,7 +190,7 @@ public class PlayerManager : MonoBehaviour
     IEnumerator ClimbUp(Transform posFinish)
     {
         Debug.Log("climb up to");
-        rb.simulated = false;
+        rigidBody.simulated = false;
         float elapsed = 0;
         
         Vector2 targetUpPosition = new Vector2(transform.position.x, posFinish.position.y + capsule.size.y / 2 + posFinish.localScale.y / 2);
@@ -212,7 +212,7 @@ public class PlayerManager : MonoBehaviour
             yield return null;
         }
 
-        rb.simulated = true;
+        rigidBody.simulated = true;
         StopCoroutine(climbUp);
 
     }
@@ -298,7 +298,7 @@ public class PlayerManager : MonoBehaviour
     {
         
         Debug.Log("player DAMAGE!");
-        rb.AddForce(new Vector2(damageVector.x * direct, damageVector.y), ForceMode2D.Force);
+        rigidBody.AddForce(new Vector2(damageVector.x * direct, damageVector.y), ForceMode2D.Force);
         toDamage = ToDamage();
         StartCoroutine(toDamage);
 

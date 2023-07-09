@@ -5,7 +5,7 @@ using UnityEngine;
 public class FireBall : MonoBehaviour
 {
     [SerializeField] FirebollData fireballData;
-    [SerializeField] Rigidbody2D rb;
+    [SerializeField] Rigidbody2D rigidBody;
 
     string toDamage;
     int damage;
@@ -24,7 +24,7 @@ public class FireBall : MonoBehaviour
         timeCount = TimeCount();
         StartCoroutine(timeCount);
 
-        rb.velocity = transform.right * speed;
+        rigidBody.velocity = transform.right * speed;
     }
 
 

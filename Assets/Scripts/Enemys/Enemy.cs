@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] EnemyData enemyData;
     [SerializeField] Behavior behavior;
-    [SerializeField] Rigidbody2D rb;
+    [SerializeField] Rigidbody2D rigidBody;
     [SerializeField] GameObject item;
     [SerializeField] Transform pointRaycastEmit;
     [SerializeField] Transform pointSpawnItem;
@@ -126,7 +126,7 @@ public class Enemy : MonoBehaviour
     {
         if(moveDirection < 0) transform.eulerAngles = new Vector2(0, 0);
         else transform.eulerAngles = new Vector2(0, 180);
-        if(rb != null)rb.velocity = Vector2.right * moveSpeed * moveDirection;
+        if(rigidBody != null)rigidBody.velocity = Vector2.right * moveSpeed * moveDirection;
     }
 
     public void Damage(int dmg)
