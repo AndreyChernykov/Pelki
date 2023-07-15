@@ -1,5 +1,22 @@
 tree_2.png
-size:790,790
+size:961,961
 filter:Linear,Linear
+pma:true
 tree trunk_2
-bounds:1,1,219,788
+bounds:1,172,219,788
+tree_crown_1/tree_crown_1
+bounds:648,43,276,216
+tree_crown_2/tree_crown_2
+bounds:700,737,223,260
+rotate:90
+tree_crown_3/tree_crown_3
+bounds:700,505,229,247
+rotate:90
+tree_crown_4/tree_crown_4
+bounds:648,262,240,301
+rotate:90
+tree_crown_5/tree_crown_5
+bounds:223,581,379,474
+rotate:90
+tree_crown_6/tree_crown_6
+bounds:223,175,422,403

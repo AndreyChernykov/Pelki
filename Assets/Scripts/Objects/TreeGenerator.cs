@@ -9,8 +9,11 @@ public class TreeGenerator : MonoBehaviour
     [SerializeField] SkeletonAnimation skeletonAnimation;
     [SerializeField] string[] skinsName;
 
+    (float, float) speedAnimationRange = (0.8f, 1.2f);
+
     void Start()
     {
+
         int rnd = Random.Range(0, skinsName.Length);
         
         var skeleton = skeletonAnimation.Skeleton;
@@ -21,6 +24,8 @@ public class TreeGenerator : MonoBehaviour
 
         skeleton.SetSkin(mixAndMatchSkin);
         skeleton.SetSlotsToSetupPose();
+
+        skeletonAnimation.timeScale = Random.Range(speedAnimationRange.Item1, speedAnimationRange.Item2);  
     }
 
 }

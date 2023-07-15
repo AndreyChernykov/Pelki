@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 115
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -120,10 +120,10 @@ TextureImporter:
       name: hole_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 15
-        width: 289
-        height: 941
+        x: 25
+        y: 640
+        width: 313
+        height: 316
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +141,10 @@ TextureImporter:
       name: hole_1
       rect:
         serializedVersion: 2
-        x: 176
-        y: 12
-        width: 356
-        height: 20
+        x: 367
+        y: 640
+        width: 313
+        height: 316
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,10 +162,10 @@ TextureImporter:
       name: hole_2
       rect:
         serializedVersion: 2
-        x: 405
-        y: 16
-        width: 289
-        height: 940
+        x: 25
+        y: 324
+        width: 313
+        height: 316
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,6 +175,69 @@ TextureImporter:
       bones: []
       spriteID: 03c0c5b11c00e8547bc72e943739a52b
       internalID: 439703089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hole_3
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 324
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a90656f0c7802b49a3c3bc0adb683d1
+      internalID: 753089090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hole_4
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 8
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6840b6d2ad5ad4449efe1ee62036b2b
+      internalID: 1035461004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hole_5
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 8
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc1230d24a1726040bdf525c3eba8d2b
+      internalID: -322825552
       vertices: []
       indices: 
       edges: []
@@ -191,8 +254,11 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       hole_0: 800350283
+      hole_3: 753089090
       hole_1: -872610529
+      hole_4: 1035461004
       hole_2: 439703089
+      hole_5: -322825552
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
