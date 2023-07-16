@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 73b470f228d4d464c86d4e3e4d97977a
+guid: e3989c08cb3342b4b8762e297e2cadba
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 260
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,85 +117,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: triangle (1)_0
+      name: plant 3 (1)_0
       rect:
         serializedVersion: 2
-        x: 72
-        y: 880
-        width: 750
-        height: 750
+        x: 18
+        y: 257
+        width: 290
+        height: 115
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f016cbc8c5fe46f4ebcdfd287e1bbd68
-      internalID: 1900397230
+      spriteID: 45f5ec3d5be3ff64fb6dbbe387510207
+      internalID: 226334818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: triangle (1)_1
+      name: plant 3 (1)_1
       rect:
         serializedVersion: 2
-        x: 835
-        y: 880
-        width: 750
-        height: 750
+        x: 350
+        y: 257
+        width: 173
+        height: 115
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e4a2b4958c374b4393394481be7dd2c
-      internalID: 455775104
+      spriteID: 660abbfc42a2fd042b2572719cb9d66c
+      internalID: -1543500615
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: triangle (1)_2
+      name: plant 3 (1)_2
       rect:
         serializedVersion: 2
-        x: 39
-        y: 130
-        width: 750
-        height: 750
+        x: 44
+        y: 38
+        width: 212
+        height: 185
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aec36595a78a1d14dbbf70764347b5c5
-      internalID: 2139176437
+      spriteID: 19ddb6ff7d909624fa11598e922dc1b5
+      internalID: 1199106528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: triangle (1)_3
+      name: plant 3 (1)_3
       rect:
         serializedVersion: 2
-        x: 834
-        y: 130
-        width: 750
-        height: 750
+        x: 361
+        y: 62
+        width: 127
+        height: 99
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0dd21a58c8ddcc241979d28b139c0cae
-      internalID: -601143448
+      spriteID: e7694292204e20b488b19c8d432047f1
+      internalID: 86609624
       vertices: []
       indices: 
       edges: []
@@ -211,10 +211,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      triangle (1)_0: 1900397230
-      triangle (1)_3: -601143448
-      triangle (1)_1: 455775104
-      triangle (1)_2: 2139176437
+      plant 3 (1)_1: -1543500615
+      plant 3 (1)_0: 226334818
+      plant 3 (1)_3: 86609624
+      plant 3 (1)_2: 1199106528
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
