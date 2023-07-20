@@ -165,9 +165,11 @@ Library: lib_burst_generated
 --root-assembly=D:\Progects\Pelki\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=D:\Progects\Pelki\Temp\StagingArea\Data\Managed\Unity.Services.Core.Environments.dll
 --root-assembly=D:\Progects\Pelki\Temp\StagingArea\Data\Managed\spine-unity-examples.dll
+--root-assembly=D:\Progects\Pelki\Temp\StagingArea\Data\Managed\NaughtyAttributes.Test.dll
 --root-assembly=D:\Progects\Pelki\Temp\StagingArea\Data\Managed\Unity.Services.Core.Internal.dll
 --root-assembly=D:\Progects\Pelki\Temp\StagingArea\Data\Managed\Unity.Timeline.dll
 --root-assembly=D:\Progects\Pelki\Temp\StagingArea\Data\Managed\Unity.Mathematics.dll
+--root-assembly=D:\Progects\Pelki\Temp\StagingArea\Data\Managed\NaughtyAttributes.Core.dll
 --root-assembly=D:\Progects\Pelki\Temp\StagingArea\Data\Managed\Unity.Services.Core.Scheduler.dll
 --root-assembly=D:\Progects\Pelki\Temp\StagingArea\Data\Managed\AimingRig.dll
 --root-assembly=D:\Progects\Pelki\Temp\StagingArea\Data\Managed\Unity.Services.Core.Device.dll

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: FireballEnemy
   m_EditorClassIdentifier: 
   <toDamage>k__BackingField: 0
-  <speed>k__BackingField: 3
+  <speed>k__BackingField: 5
   <lifeTime>k__BackingField: 3
   <damage>k__BackingField: 1

@@ -44,7 +44,7 @@ public class PuzzleController : MonoBehaviour
             puzzleActive = true;
             if (!isSolved)
             {
-                cameraBehavior = CameraBehavior(cameraOrthoSize);
+                cameraBehavior = CameraBehavior(cameraOrthoSize, gameObject, false);
                 StartCoroutine(cameraBehavior);
             }
 
@@ -59,7 +59,7 @@ public class PuzzleController : MonoBehaviour
 
             puzzleActive = false;
 
-            cameraBehavior = CameraBehavior(cameraOrthoSizeStart);
+            cameraBehavior = CameraBehavior(cameraOrthoSizeStart, collision.gameObject, true);
             StartCoroutine(cameraBehavior);
 
         }
@@ -67,17 +67,33 @@ public class PuzzleController : MonoBehaviour
 
     IEnumerator cameraBehavior;
 
-    IEnumerator CameraBehavior(float orthoSize)
+    IEnumerator CameraBehavior(float orthoSize, GameObject target, bool isFollow)
     {
         float elapsed = 0;
+
+        virtualCamera.LookAt = target.transform;
+        virtualCamera.Follow = null;
+        if (isFollow) virtualCamera.Follow = target.transform;
+        
+
         while (virtualCamera.m_Lens.OrthographicSize != orthoSize)
         {
+            virtualCamera.transform.position = Vector3.Lerp(virtualCamera.transform.position, new Vector3(target.transform.position.x, target.transform.position.y, virtualCamera.transform.position.z), elapsed / orthoSize);
+
             virtualCamera.m_Lens.OrthographicSize = Mathf.Lerp(virtualCamera.m_Lens.OrthographicSize, orthoSize, elapsed/orthoSize);
             elapsed += Time.deltaTime;
             yield return null;
         }
 
         StopCoroutine(cameraBehavior);
+    }
+
+    void CameraTarget(GameObject target, bool isFollow)
+    {
+        virtualCamera.LookAt = target.transform;
+        virtualCamera.Follow = null;
+        if (isFollow) virtualCamera.Follow = target.transform;
+        virtualCamera.transform.position = new Vector3(target.transform.position.x, target.transform.position.y, virtualCamera.transform.position.z);
     }
 
     private void CheckSolution()

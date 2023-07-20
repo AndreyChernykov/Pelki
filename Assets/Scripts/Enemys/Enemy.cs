@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject item;
     [SerializeField] Transform pointRaycastEmit;
     [SerializeField] Transform pointSpawnItem;
-    
+    [SerializeField] bool isDebugLog;
     GameObject itemObject;
 
     float detectionDistance;
@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
     float moveSpeed;
 
     public int damage { get; private set; }
-    public int moveDirection { get; set; }
+    public int moveDirection {get; set; }
     public bool isAttack { get; set; }
     
     enum Behavior
@@ -82,7 +82,7 @@ public class Enemy : MonoBehaviour
     private void Raycast()
     {
         RaycastHit2D[] hits;
-        //Debug.DrawRay(pointRaycastEmit.position, -transform.right * detectionDistance, Color.red);
+        if(isDebugLog)Debug.DrawRay(pointRaycastEmit.position, -transform.right * detectionDistance, Color.red);
 
         hits = Physics2D.RaycastAll(pointRaycastEmit.position, -transform.right, detectionDistance);
 
@@ -105,7 +105,8 @@ public class Enemy : MonoBehaviour
                 {
                     behavior = Behavior.notactive;
                     BehaviorEnemy();
-                    //Debug.Log(hit.collider.name);
+                    if (isDebugLog) Debug.Log(hit.collider.name);
+                    if (hit.collider.gameObject == this.gameObject) continue;
                     if (speed > 0)
                     {
                         if (hit.collider.transform.position.x > transform.position.x) moveDirection = -1;

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b27d746b832bf4d9eed32f5168453e, type: 3}
   m_Name: Wolf
   m_EditorClassIdentifier: 
-  <enemyType>k__BackingField: 0
+  <enemyType>k__BackingField: 2
   <health>k__BackingField: 3
   <speed>k__BackingField: 0
   <detectionDistance>k__BackingField: 3

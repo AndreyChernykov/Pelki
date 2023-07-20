@@ -262,4 +262,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireballData: {fileID: 11400000, guid: 80445eac44f99e842b149d641fd4119d, type: 2}
-  rb: {fileID: 7554280549597486917}
+  rigidBody: {fileID: 7554280549597486917}

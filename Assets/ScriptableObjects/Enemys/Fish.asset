@@ -15,6 +15,6 @@ MonoBehaviour:
   <enemyType>k__BackingField: 1
   <health>k__BackingField: 3
   <speed>k__BackingField: 2
-  <detectionDistance>k__BackingField: 5
+  <detectionDistance>k__BackingField: 8
   <speedAttack>k__BackingField: 5
   <damage>k__BackingField: 2

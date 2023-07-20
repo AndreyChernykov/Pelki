@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329416542845152938}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 2.3, z: 0}
+  m_LocalPosition: {x: -10.11, y: 2.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 329416543516152089}
   - component: {fileID: 329416543516152087}
   - component: {fileID: 329416543516152088}
+  - component: {fileID: 881982799797371763}
   - component: {fileID: 329416543516152086}
   m_Layer: 0
   m_Name: EnemyWolf
@@ -96,6 +97,7 @@ Transform:
   - {fileID: 329416543983818818}
   - {fileID: 329416542845152937}
   - {fileID: 329416542567798266}
+  - {fileID: 1150643086571681199}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -117,6 +119,7 @@ MonoBehaviour:
   item: {fileID: 563932566716633333, guid: ee41eee35a1ab7649aae0f199975a5b7, type: 3}
   pointRaycastEmit: {fileID: 329416542845152937}
   pointSpawnItem: {fileID: 329416542567798266}
+  isDebugLog: 0
 --- !u!61 &329416543516152088
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -130,7 +133,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.3152237, y: 2.0442023}
+  m_Offset: {x: 1.448842, y: 2.0442023}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -141,8 +144,25 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.303871, y: 3.2886152}
+  m_Size: {x: 6.0366344, y: 3.2886152}
   m_EdgeRadius: 0
+--- !u!114 &881982799797371763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329416543516152090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adb883f04068f94da705516798683a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 329416543516152087}
+  fireball: {fileID: 7554280549597486913, guid: 65ee537a3ae87d04ab0cbdf02e86df6e,
+    type: 3}
+  shotFrequency: 3
+  shootPoint: {fileID: 1150643086571681199}
 --- !u!50 &329416543516152086
 Rigidbody2D:
   serializedVersion: 4
@@ -163,7 +183,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 1
 --- !u!1 &329416543983818822
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,7 +266,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &329416543983818821
 MonoBehaviour:
@@ -288,3 +308,34 @@ MonoBehaviour:
   _animationName: wolf_idle
   loop: 1
   timeScale: 1
+--- !u!1 &6178290249109711583
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1150643086571681199}
+  m_Layer: 0
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1150643086571681199
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6178290249109711583}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -2.13, y: 2.63, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 329416543516152089}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
