@@ -19,7 +19,7 @@ public class PuzzleController : MonoBehaviour
 
     private void Start()
     {
-        cameraOrthoSizeStart = virtualCamera.m_Lens.OrthographicSize;
+        if(virtualCamera != null) cameraOrthoSizeStart = virtualCamera.m_Lens.OrthographicSize;
 
         SetReward(false, activateObjects);
 
