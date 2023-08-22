@@ -83,6 +83,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonAnimation: {fileID: 2217088784183674133}
+  groundMover: {fileID: 2790103788056400148}
 --- !u!70 &5330133580825591984
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -37,8 +37,8 @@ namespace Pelki.Gameplay.Characters.Movements
 
         private IInput input;
 
-        private bool isGrounded;
-        private bool isJumping;
+        public bool isGrounded { get; private set; }
+        public bool isJumping { get; private set; }
 
         private float elapsedTime;
         private float brakingElapsedTime;
