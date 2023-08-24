@@ -1,0 +1,36 @@
+Snake.png
+size:989,989
+filter:Linear,Linear
+pma:true
+body
+bounds:517,328,660,263
+rotate:90
+eye closed
+bounds:177,71,92,35
+eye open
+bounds:783,358,78,35
+eyebrow
+bounds:177,38,54,30
+head
+bounds:485,92,411,233
+jaw_low
+bounds:783,396,154,47
+neck
+bounds:1,141,481,202
+nose
+bounds:964,955,24,33
+pupil
+bounds:402,118,20,42
+rotate:90
+stone_C
+bounds:1,346,513,642
+stone_L
+bounds:783,446,183,157
+rotate:90
+stone_R
+bounds:1,6,173,132
+tail
+bounds:783,632,356,178
+rotate:90
+tongue
+bounds:177,109,222,29
