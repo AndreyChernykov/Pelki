@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: hero_pelki_Atlas
+  m_EditorClassIdentifier: 
+  atlasFile: {fileID: 4900000, guid: 252d2ae272738054d98e86e5b9df2271, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 76d026cbd5c57fe42ba3748f428c6ade, type: 2}
+  - {fileID: 2100000, guid: 81068c4c50501de40bce791538d3aac1, type: 2}
+  - {fileID: 2100000, guid: a9694b8a22aeeb444bfdf0e49aa84edd, type: 2}
+  - {fileID: 2100000, guid: 273512fb077aa0140862d7c1116e674f, type: 2}
+  - {fileID: 2100000, guid: d6a5d3e648f930d42984108610ea1087, type: 2}
+  - {fileID: 2100000, guid: 9de19bf48d097ce4f902e8d7cfd9e80b, type: 2}
+  - {fileID: 2100000, guid: aeb9ea4028ae9eb4199232ab2290891e, type: 2}
+  - {fileID: 2100000, guid: 728f25940fddb6745a85542c51c4310a, type: 2}
+  - {fileID: 2100000, guid: a7839699d0e75254f953d32ac978db4d, type: 2}
+  - {fileID: 2100000, guid: 79c3a8f17d6a1754fb0a61694acec514, type: 2}
+  - {fileID: 2100000, guid: 402aaa68a57bb684baac00913d563b18, type: 2}
+  - {fileID: 2100000, guid: 8bcaab1e6276f454ea6b09bc01841fba, type: 2}
+  - {fileID: 2100000, guid: 490727a6ebd3c204290bc9499fc57d21, type: 2}
+  - {fileID: 2100000, guid: 7a7361a124b94c44db6f8ca4eb872361, type: 2}
+  - {fileID: 2100000, guid: 00c4e55199c98f749a511355448bf97e, type: 2}
+  - {fileID: 2100000, guid: 9acc32fe9a0a56540825fabae2f18667, type: 2}
+  - {fileID: 2100000, guid: 5224975ba63f70f449a51b299e6ae376, type: 2}
