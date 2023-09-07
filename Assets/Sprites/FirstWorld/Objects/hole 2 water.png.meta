@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 93ae4fd7bd77ac64b81f02951f142c5e
+guid: 36243173f37da8b468b388186537308f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: shaman place_0
+      name: hole 2 water_0
       rect:
         serializedVersion: 2
-        x: 141
-        y: 189
-        width: 136
-        height: 144
+        x: 0
+        y: 0
+        width: 760
+        height: 2658
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d590699b75314ae419bfedee912c0b51
-      internalID: -446143550
+      spriteID: 49ff5af1f7ed8af46901ed5098d422be
+      internalID: -156852068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shaman place_1
+      name: hole 2 water_1
       rect:
         serializedVersion: 2
-        x: 292
-        y: 198
-        width: 477
-        height: 175
+        x: 799
+        y: 0
+        width: 803
+        height: 2658
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e507cce61b1b5c4d84d98f5666dc86e
-      internalID: -2114296527
+      spriteID: eb21457c3357f2047a53864feb639fa3
+      internalID: 781976960
       vertices: []
       indices: 
       edges: []
@@ -169,8 +169,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      shaman place_0: -446143550
-      shaman place_1: -2114296527
+      hole 2 water_1: 781976960
+      hole 2 water_0: -156852068
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
