@@ -1,5 +1,4 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Pelki.Gameplay.SaveSystem
@@ -7,15 +6,20 @@ namespace Pelki.Gameplay.SaveSystem
     public class SavePoint : MonoBehaviour
     {
         [SerializeField] private TriggerDetector triggerDetector;
-        
-        public event Action<GameObject> Saved;
 
-        public bool isActivated = false;
+        private bool isActivated = false;
+
+        public event Action<SavePoint> Saved;
 
         public void Start()
         {
             Debug.Log("savepoint start");
             triggerDetector.Detected += OnDetected;
+        }
+
+        private void OnDestroy()
+        {
+            triggerDetector.Detected -= OnDetected;
         }
 
         public void OnDetected(GameObject gameObject)

@@ -37,7 +37,7 @@ namespace Pelki.Gameplay
             level = Object.Instantiate(levelPrefab);
             foreach (var savePoint in level.SavePoints)
             {
-                savePoint.Saved += OnSaved;
+                savePoint.SavePoint.Saved += OnSaved;
             }
 
             playerCharacter = Object.Instantiate(charactersConfig.PlayerCharacterPrefab,
@@ -48,8 +48,14 @@ namespace Pelki.Gameplay
             screenSwitcher.ShowScreen<GameScreen>();
         }
 
-        public void OnSaved(GameObject player)
+        public void OnSaved(SavePoint savePoint)
         {
+            var savePointDto = level.SavePointsRegister[savePoint];
+
+            PlayerData.SavePointId = savePointDto.ID;
+            PlayerData.PlayerHealth = playerCharacter.Health;
+            PlayerData.Save();
+
             Debug.Log("Save");
         }
     }

@@ -7,20 +7,20 @@ namespace Pelki.Gameplay
     public class TriggerDetector : MonoBehaviour
     {
         [SerializeField] private LayerMask layerMask;
-        
+
         public event Action<GameObject> Detected;
-        
+
         public void Start()
         {
-            Debug.Log("trigger detector start");
+            Debug.Log("trigger detector start", this);
         }
-        
-        private void OnTriggerEnter(Collider collider)
+
+        private void OnTriggerEnter2D(Collider2D collider2d)
         {
-            Debug.Log("OnTriggerEnter");
-            if ((layerMask.value & collider.gameObject.layer) == collider.gameObject.layer)
+            Debug.Log("OnTriggerEnter", collider2d.gameObject);
+            if ((layerMask.value & collider2d.gameObject.layer) == collider2d.gameObject.layer)
             {
-                Detected?.Invoke(collider.GameObject());
+                Detected?.Invoke(collider2d.GameObject());
             }
         }
     }
