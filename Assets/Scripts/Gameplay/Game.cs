@@ -1,6 +1,7 @@
 using Pelki.Configs;
 using Pelki.Gameplay.Characters;
 using Pelki.Gameplay.Input;
+using Pelki.Gameplay.SaveSystem;
 using Pelki.UI;
 using Pelki.UI.Screens;
 using UnityEngine;
@@ -16,10 +17,12 @@ namespace Pelki.Gameplay
 
         private Level level;
         private PlayerCharacter playerCharacter;
+        private LevelSessionData levelSessionData;
 
         public Game(LevelsConfig levelsConfig, CharactersConfig charactersConfig, ScreenSwitcher screenSwitcher,
-            IInput input)
+            IInput input, LevelSessionData levelSessionData)
         {
+            this.levelSessionData = levelSessionData;
             this.charactersConfig = charactersConfig;
             this.input = input;
             this.screenSwitcher = screenSwitcher;
@@ -47,8 +50,10 @@ namespace Pelki.Gameplay
             screenSwitcher.ShowScreen<GameScreen>();
         }
 
-        private void OnSaved(GameObject player)
+        private void OnSaved(SavePoint savePoint)
         {
+            levelSessionData.SavePointId = savePoint.ID;
+            levelSessionData.Save();
             // TODO сделать реализацию сохранения
             Debug.Log("Save");
         }

@@ -9,8 +9,11 @@ namespace Pelki.Gameplay.SaveSystem
         [SerializeField] private GameObject activatedState;
         [SerializeField] private GameObject notActivatedState;
         [SerializeField] private bool isActivated;
+        [SerializeField] private string id;
 
-        public event Action<GameObject> Saved;
+        public string ID => id;
+
+        public event Action<SavePoint> Saved;
 
         private void Start()
         {
@@ -22,7 +25,7 @@ namespace Pelki.Gameplay.SaveSystem
         {
             if (!isActivated)
             {
-                Saved?.Invoke(gameObject);
+                Saved?.Invoke(this);
                 ActivateState();
             }
         }
